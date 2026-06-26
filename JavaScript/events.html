@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            height: 300vh;
+        }
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mouse Events</h2>
+    <br>
+    <div id="myDiv"></div>
+    <br>
+    <input type="text">
+    <form>
+        <label>Enter name</label>
+        <input type="text" id="myInput">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        //Form events
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Form submitted successfully");
+        });
+        document.querySelector("#myInput").addEventListener("focus", () => {
+            console.log("Input field focused");
+        });
+        document.querySelector("#myInput").addEventListener("blur", () => {
+            console.log("Input field lost focus");
+        });
+        document.querySelector("#myInput").addEventListener("change", () => {
+            console.log(`Input changed to: ${event.target.value}`);
+        });
+        document.querySelector("#myInput").addEventListener("input", (e) => {
+            console.log(`The input is: ${e.target.value}`);
+        });
+        //Mouse Events
+        let box = document.getElementById("myDiv");
+        box.addEventListener("click", () => {
+            box.style.backgroundColor = "red";
+        });
+        box.addEventListener("dblclick", () => {
+            box.style.backgroundColor = "yellow";
+            box.innerText = "User double click";
+        });
+        box.addEventListener("mouseover", () => {
+            box.style.backgroundColor = "blue";
+        });
+        box.addEventListener("mouseout", () => {
+            box.style.backgroundColor = "aquamarine";
+        });
+        box.addEventListener("mousemove", (e) => {
+            box.innerText = `X value: ${e.offsetX} and Y value: ${e.offsetY}`;
+            //alert("Warning: dont move outside the box");
+        });
+
+        //Keyboard Events
+        let i = document.querySelector("input");
+        i.addEventListener("keydown", (event) => {
+            console.log("The key pressed is", event.key);
+        });
+        i.addEventListener("keyup", (event) => {
+            console.log("The key released is", event.key);
+        });
+        i.addEventListener("keypress", (event) => {
+            const pattern = /^[a-zA-Z]$/;
+
+            if (!pattern.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+
+        //Window events
+        window.addEventListener("DOMContentLoaded", () => {
+            alert("Content Loaded Successfully");
+        });
+        window.addEventListener("resize", () => {
+            alert("Window resized");
+        });
+        window.addEventListener("scroll", () => {
+            console.log("Window scrolled", window.scrollY);
+        });
+    </script>
+</body>
+</html>

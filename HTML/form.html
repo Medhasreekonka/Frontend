@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha form</title>
+</head>
+<body>
+    <h2>Captcha Form</h2>
+    <center><form>
+        <br>
+        <fieldset>
+            <legend>Personal info</legend>
+        <label for="captcha">Enter captcha:</label>
+        <input type="text" id="captcha" placeholder="Enter Captcha..." name="captcha">
+        <br>
+        <br>
+        <label for="un">Username: </label>
+        <input type="text" placeholder="Enter name..." id="un" name="username">
+        <br>
+        <br>
+        <label for="em">Email:</label>
+        <input type="email" placeholder="Enter email..." name="email" id="em">
+        <br>
+        <br>
+        <label for="pa">Password:<span style="color: red;">*</span></label>
+        <input type="password" placeholder="Enter password..." name="pas" id="pa" required>
+        <br>
+        <br>
+        <label for="pn">Mobile number</label>
+        <input type="tel" placeholder="Enter number..." id="pn">
+        <br>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" min="1" max="100" id="age" placeholder="Enter age...">
+        <br>
+        <br>
+        <label>DOB</label>
+        <input type="date">
+        <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>General info</legend>
+        <br>
+        <label>DOB with time</label>
+        <input type="datetime-local">
+        <br>
+        <br>
+        <label>Time</label>
+        <input type="time">
+        <br>
+        <br>
+        <label>Profile URL</label>
+        <input type="url">
+        <br>
+        <br>
+        <label>other</label>
+        <input type="color">
+        <input type="week">
+        <br>
+        <br>
+        <label>Upload PanCard</label>
+        <input type="file">
+        <br>
+        <br>
+        <label>Rate out of 5</label>
+        <input type="range" min="1" max="5" name="ranting" value="0">
+        <br>
+        <br>
+        <label><input type="checkbox" name="option1" value="cash"> Cash</label>
+        <label><input type="checkbox" name="option2" value="upi"> UPI</label>
+        <label><input type="checkbox" name="option3" value="ppay"> PayPal</label>
+        <br>
+        <br>
+        <label> Gender: </label>
+        <label><input type="radio" name="opt" value="male">Male</label>
+        <label><input type="radio" name="opt" value="female">Female</label>
+        <br>
+        <br>
+        <label>You are allowed:</label>
+        <input type="hidden">
+        <br>
+        <br>
+        <label for="tech">Choose your Tech Stack:</label>
+        <select name="tech" id="tech" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <br>
+        <br>
+        <label for="comments">Comments :</label>
+        <textarea id="comments" rows="5" cols="40" name="comments" placeholder="Enter comments">
+        </textarea>        
+        <br>
+        </fieldset>
+        <br>
+        <input type="submit"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="reset" value="cancel">
+        <br>
+        <br>
+        
+        <button type="button">Help Center</button>
+    </form></center>
+</body>
+</html>

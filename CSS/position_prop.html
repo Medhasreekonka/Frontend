@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position properties</title>
+    <style>
+        div#static {
+            /*Position: static; default*/
+            width: 100px; height: 100px;
+            border: 2px solid black;
+            background-color: aqua;
+            left: 100px;
+            top: 100px;
+        }
+        div#rel {
+            Position: relative; 
+            width: 100px; height: 100px;
+            border: 2px solid black;
+            background-color: orange;
+            left: 100px;
+            bottom: 100px;
+        }
+        div#parentrel {
+            Position: relative;
+            width: 400px; height: 200px;
+            border: 2px solid black;
+            left: 100px;
+            bottom: 100px;
+        }
+        div#childabs {
+            position: absolute;
+            width: 100px; height: 100px;
+            background-color: brown;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="static">Static Div</div>
+    <div id="rel">Relative Div</div>
+    <div id="parentrel">
+        <div id="childabs"></div>
+    </div>
+</body>
+</html>

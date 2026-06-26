@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JS</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        a = 20; //re-initialize
+        var a = 30; //re-declare
+        console.log(a);
+
+        //scope-function
+        function varvari() {
+            var name = "Medha";
+            console.log(name);
+        }
+        varvari()
+
+        //scope - let & const block
+        if(true) {
+            let z = 100;
+            const pi = 3.14;
+            console.log(z)
+            console.log(pi)
+        }
+
+        //console.log(z) error
+        //console.log(pi)  throws an error
+
+        //variables are case sensitive
+        //variables A-Z a-z 0-9
+        //Special characters $ and _
+        //can not start with a digiy
+        //cant be keywords
+        //standard - snakecase _, camel Case
+        
+    </script>
+</body>
+</html>

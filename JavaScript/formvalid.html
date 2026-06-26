@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <!--Not empty, 3-15 char, only letters, no numbers underscores-->
+        <label>Username</label>
+        <input type="text" id="username">
+        <br><br>
+        <!--letters, numbers, ., _, - before @, valid domain name after @, a dot + at least 2 letters (eg- .com, .in)-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        let i = document.getElementById("username");
+        let f = document.querySelector("form");
+        i.addEventListener("keypress", (event) => {
+            const pattern = /^[a-zA-Z]$/;
+
+            if (!pattern.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+
+        f.addEventListener("submit", (event) => {
+            event.preventDefault();
+        
+        let un = document.getElementById("username").value.trim();
+        let regex = "/^[a-zA-Z]+$/";
+        if (un === "") {
+            alert("Warning: Username cannot be empty");
+        } else if (un.length < 3) {
+            alert("Warning: Username should be atleast 3 charcters");
+        } else if (un.length > 15) {
+            alert("Warning: Username must not exceed 15 charcters");
+        } else if (!regex.test(un)) {
+            alert("Only letters allowed");
+        } else {
+            alert("Valid Name");
+        }
+
+        //Email validation
+        const email = document.getElementById("email").value.trim();
+        const emailpattern = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailpattern.test(email)) {
+            alert("Please enter a valid email address");
+        } else {
+            alert("Valid email");
+        }
+
+        //Password validation
+        const pas = document.getElementById("password").value;
+        //At least 1 letter/1 digit/ 1 spl char from @$!%*?& / min length 8
+        // /^(?=.*[A-Za-z])(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+        const pasPattern = /^(?=.*[A-Za-z])(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        if (!pasPattern.test(password)) {
+            alert("Passowrd must be atleast 8 characters long and include at least one letter and one number");
+        } else {
+            alert("Password is valid!");
+        }
+
+        alert("Form submitted");
+    });
+    </script>
+</body>
+</html>

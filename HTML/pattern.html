@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h2>User Form</h2>
+    <hr>
+    <br>
+    <form>
+        <!--OM- capital "^[A-z]{2,7}$"
+        Gamans - title case    "^[A-Z]{1}[a-z]{1,50}$"
+        Gamana Reddy -->
+
+        <label for="un">Name: </label>
+        <input type="text" id="un" name="username" pattern="^[A-za-z]{2,7}$">
+        <br>
+        <br>
+        <!--9901667891
+        990-166-7891
+        Indian [6,7,8,9]
+        +91990-177-7891-->
+        <label for="pn">Phone Number: </label>
+        <input type="tel" id="pn" name="number" pattern="^/+91[6-9]{1}\d{2}-\d{3}-\d{4}$" title="Enter only number" placeholder="389-567-8976">
+        <br>
+        <br>
+        <!--.{8,}
+        no specifid [A-za-z\d@$!%*?&#]{8,}
+        look a head ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-za-z\d]{8,}$
+        Strong Password validation(min 12 char, must include uppercase, lowercase, digit specialcharacters)
+        ^(?=.*[a-z])(?=.*[A-Z](?=.*\d))(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$
+        min 10 char, atleasr 2 digits, atleast 2 uppercase letters
+        must contain 1 spl char from !, #, % or *, must contain lowercase 12, 60
+        ^(?=.*\d{2,})(?=.*[A-Z]{2,})(?=.*[!#%*])[A-Za-Z\d!#%*]{10,}$-->
+        <label for="pwd">Password:</label>
+        <input type="text" id="pwd" name="Password" pattern="^(?=.*\d){2,}(?=(.*[A-Z]){2,})(?=.*[!#%*])(?=(.*[a-z]))[A-Za-z\d!#%*]{12,60}$">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="^[A-za-z0-9\._%+\-]+@[A-Za-Z0-9\.\-]+\.[A-Za-Z]{2,}$"        
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>

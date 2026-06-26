@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            background-color: red;
+            color: aliceblue;
+            animation-name: colorChange;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+        }
+        h1 {
+            animation-name: fadeIn;
+            animation-duration: 6s;
+            animation-delay: 3s;
+        }
+         p {
+            animation-name: slideIn;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+         }
+        /*@keyframes colorChange {
+            from {background-color: red;}
+            to {background-color: white;}
+        }*/
+        @keyframes colorChange {
+            20% {background-color: red;}
+            40% {background-color: white;}
+            60% {background-color: aqua;}
+            80% {background-color: orange;}
+            100% {background-color: red;}
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        /*@keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        } */
+         @keyframes slideIn {
+            0% { 
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateX(0);
+                opacity: 1;
+            }
+         }
+    </style>
+</head>
+<body>
+    <h1>Animations in CSS</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus recusandae, accusantium soluta distinctio voluptates vitae animi fugiat illum beatae velit nulla id aliquid? Recusandae autem voluptatum voluptates impedit obcaecati! Commodi?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam accusantium obcaecati error reprehenderit quia ipsam iusto! Maiores quas officia enim, laboriosam, nulla saepe labore laudantium mollitia, rerum quod et magni.
+    </p>
+</body>
+</html>

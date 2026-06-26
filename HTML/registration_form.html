@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <br>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!--Hidden-->
+            <input type="hidden" name="form_id" value="12345">
+
+            <!--Text-->
+            <label>Full Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" required autofocus>
+            <br>
+            <br>
+            <!--Email-->
+            <label>Email: </label>
+            <input type="email" name="email">
+            <br>
+            <br>
+            <!--Password-->
+            <label>Password: </label>
+            <input type="password" name="Password">
+            <br>
+            <br>
+            <!--Phone-->
+            <label>Phone: </label>
+            <input type="tel" name="number" placeholder="10 digit number">
+            <br>
+            <br>
+            <!--Website-->
+            <label>Website: </label>
+            <input type="url" name="website" placeholder="https://example.com">
+            <br>
+            <br>
+            <!--Search-->
+            <label>Search Course: </label>
+            <input type="search" name="search" placeholder="Search...">
+            <br>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Details</legend>
+            <!--Age-->
+            <label>Age: </label>
+            <input type="date" name="age">
+            <br>
+            <br>
+            <!--DOB-->
+            <label>Date of Birth: </label>
+            <input type="date" name="dob">
+            <br>
+            <br>
+            <label>Preferred Time: </label>
+            <input type="time" name="time">
+            <br>
+            <br>
+            <label>Meeting Date & Time: </label>
+            <input type="datetime-local" name="datetime">
+            <br>
+            <br>
+            <label>Gender: </label>
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="female">Female</label>
+            <br>
+            <br>
+            <label>Hobbies: </label>
+            <label><input type="checkbox" name="gen">Reading</label>
+            <label><input type="checkbox" name="gen">Sports</label>
+            <br>
+            <br>
+            <label>Favorite color: </label>
+            <input type="color" name="color">
+            <br>
+            <br>
+            <label>Skill Level:</label>
+            <input type="range" name="range" min="1" max="5">
+            <br>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Selection</legend>
+            <label>Course: </label>
+            <select name="course">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </select>
+            <br>
+            <br>
+            <label>City: </label>
+            <input type="text" name="city">
+            <br>
+            <br>
+            <label>Upload Photo: </label>
+            <input type="file" name="file">
+            <br>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Comments</legend>
+            <textarea rows="5" cols="20" placeholder="Write your comments"></textarea>
+        </fieldset>
+
+        <input type="submit">
+        <input type="reset">
+        <input type="button"  value="disabled button" > 
+
+    </form>
+</body>
+</html>
